@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <a href="javascript:void(0);" onclick="showHomePage()">Home</a>
+            <a href="javascript:void(0);" onclick="showSignUpPage()">Sign Up</a>
+            <a href="javascript:void(0);" onclick="showLoginPage()">Login</a>
+            <a href="javascript:void(0);" onclick="showProfilePage()">Profile</a>
+        </nav>
+    </header>
+
+    <!-- Dynamic content goes here -->
+    <div id="main-content">
+        <!-- Home page content -->
+        <div id="home-page" class="page">
+            <h1>Welcome to the Blogging Platform</h1>
+            <div id="blog-list"></div>
+        </div>
+
+        <!-- Sign up page content -->
+        <div id="signup-page" class="page" style="display: none;">
+            <h1>Create an Account</h1>
+            <form id="signup-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- Login page content -->
+        <div id="login-page" class="page" style="display: none;">
+            <h1>Login</h1>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="login-username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Profile page content -->
+        <div id="profile-page" class="page" style="display: none;">
+            <h1>Your Blogs</h1>
+            <div id="user-blogs"></div>
+            <button onclick="createNewBlog()">Create New Blog</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
